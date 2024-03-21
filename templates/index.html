@@ -57,10 +57,14 @@
     <div class="container">
         <h1>Upload Excel Files</h1>
         <form action="/process" method="post" enctype="multipart/form-data">
-            <input type="file" name="file1" accept=".xlsx">
-            <input type="file" name="file2" accept=".xlsx">
+            <label for="file1">Excel 1(All Details):</label><br>
+            <input type="file" name="file1" accept=".xlsx"><br>
+            <label for="file2">Excel 2(Some Students name):</label><br>
+            <input type="file" name="file2" accept=".xlsx"><br>
+            <input type="file" name="resumes" accept=".pdf" multiple><br>
             <button type="submit">Merge</button>
         </form>
+        
     </div>
 </body>
 </html>
