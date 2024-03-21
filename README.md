@@ -1,4 +1,4 @@
-# Excel Merge Web App
+# Student-Resume-Merger
 # Set Up Your Environment:
 1. Install Python if you haven't already.
 2. Install Flask and Pandas using pip:
