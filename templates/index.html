@@ -7,25 +7,28 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
 
         .container {
-            background-color: #fff;
-            border-radius: 5px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 90%;
+            text-align: center;
         }
 
         h1 {
-            text-align: center;
             margin-bottom: 20px;
+            color: #333333;
         }
 
         form {
@@ -34,15 +37,32 @@
             align-items: center;
         }
 
+        label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #555555;
+        }
+
         input[type="file"] {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 300px;
+            box-sizing: border-box;
+        }
+
+        input[type="file"]:focus {
+            outline: none;
+            border-color: #007bff;
         }
 
         button[type="submit"] {
             background-color: #007bff;
-            color: #fff;
+            color: #ffffff;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -57,14 +77,14 @@
     <div class="container">
         <h1>Upload Excel Files</h1>
         <form action="/process" method="post" enctype="multipart/form-data">
-            <label for="file1">Excel 1(All Details):</label><br>
-            <input type="file" name="file1" accept=".xlsx"><br>
-            <label for="file2">Excel 2(Some Students name):</label><br>
-            <input type="file" name="file2" accept=".xlsx"><br>
-            <input type="file" name="resumes" accept=".pdf" multiple><br>
+            <label for="file1">Excel 1 (All Details):</label>
+            <input type="file" name="file1" accept=".xlsx">
+            <label for="file2">Excel 2 (Some Students name):</label>
+            <input type="file" name="file2" accept=".xlsx">
+            <label for="resumes">Resumes (Optional):</label>
+            <input type="file" name="resumes" accept=".pdf" multiple>
             <button type="submit">Merge</button>
         </form>
-        
     </div>
 </body>
 </html>
